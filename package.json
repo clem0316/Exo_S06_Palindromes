@@ -1,0 +1,22 @@
+{
+  "name": "exo_s06_palindromes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scipt.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clem0316/Exo_S06_Palindromes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clem0316/Exo_S06_Palindromes/issues"
+  },
+  "homepage": "https://github.com/clem0316/Exo_S06_Palindromes#readme"
+}

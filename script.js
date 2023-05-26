@@ -2,6 +2,7 @@ const date1 = "12/02/2012";
 const date2 = "11/02/2011";
 const date3 = "32/11/0998";
 const date4 = "32/04/2000";
+const date5 = "11/12/2111";
 
 let moisLongs = [1, 3, 5, 7, 8, 10, 12];
 let moisCourts = [4, 6, 9, 11];
@@ -35,25 +36,26 @@ const isValidDate = (date) => {
       theDate.theMonth = "0" + theDate.theMonth;
     }
     return theDate.theDay + "" + theDate.theMonth + "" + theDate.theYear;
+    // ici les guillements vides dans la concaténation évitent que les "+" créent l'addition. On aurait pu aussi utiliser une method de string, mais c'est une autre manière de faire.
   }
 };
-// console.log(isValidDate(date2));
+// console.log(isValidDate(date5));
 
 // Etape 2
 
-function isPalindrome(date) {
+const isPalindrome = (date) => {
   let checkMyDate = isValidDate(date);
+  console.log(checkMyDate);
   let revMyDate = checkMyDate.split("").reverse().join("");
   if (checkMyDate === "La date n'est pas valide") {
     return "La date n'est pas valide";
-  }
-  if (checkMyDate === revMyDate) {
+  } else if (checkMyDate === revMyDate) {
     return "La date est un PALINDROME";
   } else {
     return "La date n'est PAS un palindrome";
   }
-}
-console.log(isPalindrome(date4));
+};
+console.log(isPalindrome(date5));
 
 //Etape 3
 
@@ -75,3 +77,7 @@ console.log(isPalindrome(date4));
 
 // mon
 //      ^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$
+
+// TESTS
+exports.isValidDate = isValidDate;
+exports.isPalindrome = isPalindrome;
